@@ -1,0 +1,21 @@
+[package]
+name = "classified_macros"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.70"
+license = "MIT OR Apache-2.0"
+description = "#[derive(Classified)] for the classified crate: a struct of secret fields becomes a zeroized, redacted container with a borrowed view."
+authors = ["James Hunt <james@1o.business>"]
+repository = "https://github.com/jameshuntt/classified_macros"
+readme = "README.md"
+keywords = ["secret", "zeroize", "derive", "proc-macro", "security"]
+categories = ["cryptography", "development-tools::procedural-macro-helpers"]
+include = ["src/**", "Cargo.toml", "README.md", "LICENSE-MIT", "LICENSE-APACHE"]
+
+[lib]
+proc-macro = true
+
+[dependencies]
+proc-macro2 = "1"
+quote = "1"
+syn = "2"

@@ -40,6 +40,11 @@ type must implement `zeroize::Zeroize`), a `Debug` that prints them as
 Generic structs are supported; put the `Zeroize` bound on the struct's own
 generics, since a `Drop` impl cannot add bounds the struct does not have.
 
+## Releasing
+
+Bump `version` in Cargo.toml, add a dated `## <version> (YYYY-MM-DD)` entry to CHANGELOG.md, and push to
+`main`. CI (.github/workflows/ci.yml) runs the tests and clippy, then publishes that version to crates.io.
+
 ## License
 
 MIT OR Apache-2.0.
